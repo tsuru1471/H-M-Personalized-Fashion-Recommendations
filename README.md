@@ -26,3 +26,15 @@
    
 
 
+# 4/21
+
+・pytorch lightning API　お勉強
+
+例えばloaderにデコレータをつけるか否かなど、versionの違いで戸惑う部分も多い。単純に参考文献も多くなくとてもしんどいが身に着けるためKaggleしながら毎日API見ていくしかないっすね。
+
+・subset
+
+pure pytorch におけるデータセット後の分割方法
+
+Subset(Train(dataset),foldを示すindex)
+
