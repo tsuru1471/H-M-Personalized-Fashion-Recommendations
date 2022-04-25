@@ -67,3 +67,31 @@ DataModuleを普通に作成。FOLd分けた後に、どうにかそのFoldを�
 DataModuleのコンタラクタにどのfoldを採用するかの引数を与える。k=1なら初めのfoldなど。それを全foldでできるようにfor ループ
 
 https://gist.github.com/ashleve/ac511f08c0d29e74566900fd3efbb3ec
+
+
+対して、kfoldループを作ってからmodel定義するならこんな感じ？
+
+kf=,,,
+
+for train_idx,test_idx in kf.split,,, :
+
+    def MyDataModule(LightningDataModule):
+    
+        def __init__(self,,,):
+        
+            super().__init__()
+            
+            self.train=data[train_idx]
+            
+            self.valid=data[vaid_idx]
+            
+            ....
+            
+    def Net(LightningModule):
+    
+    ....
+   
+   
+  
+  自分だのコードなら別によさそうだけど、可読性やしっくり感でとりあえず、setup内foldでやる
+    
