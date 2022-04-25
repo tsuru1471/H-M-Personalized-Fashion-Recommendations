@@ -38,3 +38,26 @@ pure pytorch におけるデータセット後の分割方法
 
 Subset(Train(dataset),foldを示すindex)
 
+
+
+# 4/25
+
+・early stopping
+
+trainerインスタンス作成時にcallbackのリストに入れて、fit。引数にtrainとvalloader入れる？
+
+→modelだけでもやってくれそうだが、、、
+
+
+・training_step & traing_epoch_step
+
+バッチ学習の間の処理がtraining_step、1エポック終わった後の処理がtrainig_epoch_step
+
+validationも全く同じ。To activate the validation loop while trainingってドキュメントに書いてた。
+
+
+
+
+・計画
+
+DataModuleを普通に作成。FOLd分けた後に、どうにかそのFoldを反映させられるようにfitに与えたい。
