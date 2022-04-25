@@ -61,3 +61,9 @@ validationも全く同じ。To activate the validation loop while trainingって
 ・計画
 
 DataModuleを普通に作成。FOLd分けた後に、どうにかそのFoldを反映させられるようにfitに与えたい。
+
+案1 setup内でkfold
+
+DataModuleのコンタラクタにどのfoldを採用するかの引数を与える。k=1なら初めのfoldなど。それを全foldでできるようにfor ループ
+
+https://gist.github.com/ashleve/ac511f08c0d29e74566900fd3efbb3ec
