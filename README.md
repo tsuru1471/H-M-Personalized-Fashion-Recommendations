@@ -112,6 +112,12 @@ for train_idx,test_idx in kf.split,,, :
 ndimはaxisと同じ。最大indexを格納した一次元tensor配列を作成。defaultでは最大要素のindexをreturnするのに注意
 
 
-・torch.cat(,dim=0)
+・torch.cat([],dim=0)
 
 入力した配列をdim方向に追加。正直dim=0の場合以外理解してないけど使う予定ないため
+
+
+
+・torch.stack([],dim=0)
+
+入力した配列を新たな次元を追加して格納。(2,3)も配列を三つ格納したリストを入力すると(3,2,3)の配列が返る
