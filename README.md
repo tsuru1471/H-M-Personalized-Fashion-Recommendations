@@ -121,3 +121,29 @@ ndimはaxisと同じ。最大indexを格納した一次元tensor配列を作成�
 ・torch.stack([],dim=0)
 
 入力した配列を新たな次元を追加して格納。(2,3)も配列を三つ格納したリストを入力すると(3,2,3)の配列が返る
+
+
+・tensor.view()
+
+ほぼnumpyのreshape。.view(-1)で一次元tensorにできる。
+
+
+・torch.detach()
+
+ただbackward()機能切ってるだけ?
+
+・torch.numpy()
+
+numpy型
+
+・torch.item()
+
+単一要素のその値を取り出す。
+
+
+pl
+
+・training_step はreturn でlossが必要だが、validation_stepはそうでもないっぽい。
+
+
+
