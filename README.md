@@ -106,3 +106,12 @@ for train_idx,test_idx in kf.split,,, :
 
    → epoch前に固定すればエポックごとに異なるデータの組となり、ロード前つまりバッチ処理時に固定数れば全エポックでバッチの組み合わせが固定される
 
+
+・torch.argmax(data,ndim=None)
+
+ndimはaxisと同じ。最大indexを格納した一次元tensor配列を作成。defaultでは最大要素のindexをreturnするのに注意
+
+
+・torch.cat(,dim=0)
+
+入力した配列をdim方向に追加。正直dim=0の場合以外理解してないけど使う予定ないため
