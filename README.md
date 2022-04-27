@@ -147,3 +147,13 @@ pl
 
 
 
+
+# 4/27
+
+・early stopping API
+
+_run_early_stopping_check() でealry_stopping処理が行われるっぽい。ただdefaultでvalidation_epoch_end時に実行される風に書いているのに、source見る感じその逆で困惑。
+
+実際実行してみて、どっちで学習切れてるか要確認。
+
+↑ 引数 : check_on_train_epoch_end がdefaultのままでよいのか否か
