@@ -173,4 +173,21 @@ pl.DataModuleでデータセット作ったら、そのインスタンスを引�
 
 https://github.com/PyTorchLightning/pytorch-lightning/blob/master/pytorch_lightning/trainer/trainer.py
 
->  datamodule: An instance of :class:`~pytorch_lightning.core.datamodule.LightningDataModule`.
+>  datamodule: An instance of :class:`~pytorch_lightning.core.datamodule.LightningDataModule`
+
+
+・early_stopping
+
+monitor
+
+train/valのstep でself.log()したもの("val_loss"等)を追跡するっぽい
+
+
+
+・training_step/validation_step の 返り値
+
+training_stepの返り値 のlossは自動的に辞書に格納されているっぽい
+
+validationの返り値は自分で設定しない限りそのまま
+
+
