@@ -176,18 +176,46 @@ https://github.com/PyTorchLightning/pytorch-lightning/blob/master/pytorch_lightn
 >  datamodule: An instance of :class:`~pytorch_lightning.core.datamodule.LightningDataModule`
 
 
-・early_stopping
-
-monitor
-
-train/valのstep でself.log()したもの("val_loss"等)を追跡するっぽい
-
-
 
 ・training_step/validation_step の 返り値
 
 training_stepの返り値 のlossは自動的に辞書に格納されているっぽい
 
 validationの返り値は自分で設定しない限りそのまま
+
+
+・学習順序
+
+![image](https://user-images.githubusercontent.com/92427575/165779040-bc5a3015-4dad-451f-b476-912e4f4f1529.png)
+
+
+
+
+
+
+===============================================================================================================================================================
+
+
+・early_stopping
+
+monitor
+
+train/valのstep でself.log()したもの("val_loss"等)を追跡するっぽい
+
+min_delta
+
+scoreの更新量と比較する値。defaultでは0.0
+
+
+・学習モデル読み込み
+
+https://goody-jp.com/pytorch-lightning%E3%81%AEckpt%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92load%E3%81%99%E3%82%8B%E3%81%AE%E3%81%AB%E3%81%AF%E3%81%BE%E3%81%A3%E3%81%9F%E8%A9%B1%E3%81%AE%E3%81%9D%E3%81%AE%E5%BE%8C/
+
+この通りやろう!!!
+
+modelに別の引数(layer層数など)を設定している場合、この通りやらないと "int object ... not callable"みたいなエラー出る。理由は不明
+
+
+
 
 
