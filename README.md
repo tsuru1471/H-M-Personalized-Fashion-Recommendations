@@ -186,12 +186,21 @@ validationの返り値は自分で設定しない限りそのまま
 
 ・学習順序
 
+step時にt/v,epoch_endでt_e/v_eを出力させた
+
 ![image](https://user-images.githubusercontent.com/92427575/165779040-bc5a3015-4dad-451f-b476-912e4f4f1529.png)
 
+train_step →　valid_step → valid_epoch_end → train_epocH_end の順だった。
 
+またなぜか初めに validtionが行われている
 
+![image](https://user-images.githubusercontent.com/92427575/165780032-1f4caefb-3ca4-47ad-9a83-477fc67c9fa6.png)
 
+こういう観点からもepoch_end時に特に何か出力する必要もないのではないかなと感じた。
 
+ただdefaultでは更新時のみ出力される点、epochが不明な点を考慮して training_epoch_endで次のepochを表示するのは良いかもなと思った。
+
+しかしこれは最後っ屁があるためそこが不満ではある。
 
 ===============================================================================================================================================================
 
