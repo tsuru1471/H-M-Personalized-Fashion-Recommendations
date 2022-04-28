@@ -48,6 +48,8 @@ trainerインスタンス作成時にcallbackのリストに入れて、fit。�
 
 →modelだけでもやってくれそうだが、、、
 
+→ 4/28 追記
+
 
 ・training_step & traing_epoch_step
 
@@ -157,3 +159,15 @@ _run_early_stopping_check() でealry_stopping処理が行われるっぽい。�
 実際実行してみて、どっちで学習切れてるか要確認。
 
 ↑ 引数 : check_on_train_epoch_end がdefaultのままでよいのか否か
+
+
+# 4/28
+
+・gpu
+
+Trainerのコントラクタの引数で指定。gpus=1 ←台数
+
+・trainer.fit()
+
+pl.DataModuleでデータセット作ったら、そのインスタンスを引数datamodeuleに与えるっぽい
+
