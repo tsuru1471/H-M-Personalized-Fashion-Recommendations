@@ -171,3 +171,6 @@ Trainerのコントラクタの引数で指定。gpus=1 ←台数
 
 pl.DataModuleでデータセット作ったら、そのインスタンスを引数datamodeuleに与えるっぽい
 
+https://github.com/PyTorchLightning/pytorch-lightning/blob/master/pytorch_lightning/trainer/trainer.py
+
+>  datamodule: An instance of :class:`~pytorch_lightning.core.datamodule.LightningDataModule`.
